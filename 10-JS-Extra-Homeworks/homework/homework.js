@@ -115,36 +115,24 @@ function sortArray(arr) {
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
   //Escribe tu código aquí
 
-  // --------------------------------------------------------
-  // --------------------------------------------------------
-  // --------------------------------------------------------
-  // --------------------------------------------------------
+  for(let i = 0; i<arr.length; i++){
 
+    for(let j = i+1; j<arr.length; j++){
 
-  // function verificarOrden(a){
+      if(arr[i].length > arr[j].length){
 
-  //   let retorno = true; 
+        let aux = arr[i];
 
-  //   for (let i = 0; i<a.length; i++) {
+        arr[i] = arr[j];
 
-  //     if(a[i+1] != undefined){
-  //       if(a[i].length>a[i+1].length) return false;
-  //     }
-  //   }
-  //   return retorno;
-  // }
+        arr[j] = aux;
 
-  // --------------------------------------------------------
-  // --------------------------------------------------------
-  // --------------------------------------------------------
+      }
+    }
+  }
 
-  // for(let i = 0; i<arr.length; i++){
-    
-  // }
-  
-  return nuevoArreglo;
+  return arr;
 }
-
 
 function buscoInterseccion(arreglo1, arreglo2){
   //Existen dos arrays, cada uno con 5 números. A partir de ello, escribir una función que permita 
